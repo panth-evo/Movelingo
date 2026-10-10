@@ -1,0 +1,42 @@
+[
+  {
+    "sample_id": "eval_001",
+    "language": "de",
+    "cefr": "B1",
+    "skill": "writing",
+    "task_prompt": "Write an informal email to a friend inviting them to your new apartment. Describe the apartment and suggest a date.",
+    "user_text": "Hallo Anna, wie geht es dir? Ich habe eine neue Wohnung! Sie ist sehr groß und schön. Es gibt drei Zimmer und einen Balkon. Die Küche ist auch sehr modern. Möchtest du am Samstag kommen? Wir können Pizza essen und Musik hören. Liebe Grüße.",
+    "human_scores": {
+      "Task fulfilment": "A",
+      "Grammatical accuracy": "B",
+      "Lexical resource": "B"
+    }
+  },
+  {
+    "sample_id": "eval_002",
+    "language": "de",
+    "cefr": "B1",
+    "skill": "writing",
+    "task_prompt": "Write an informal email to a friend inviting them to your new apartment. Describe the apartment and suggest a date.",
+    "user_text": "Hallo, ich bin neue Wohnung. Groß Zimmer. Du kommen Samstag Pizza. Tschüss.",
+    "human_scores": {
+      "Task fulfilment": "D",
+      "Grammatical accuracy": "D",
+      "Lexical resource": "E"
+    }
+  },
+  {
+    "sample_id": "eval_003",
+    "language": "fr",
+    "cefr": "B2",
+    "skill": "speaking",
+    "task_prompt": "Discuss the impact of remote work on city centers. Present your viewpoint clearly.",
+    "user_text": "Je pense que le télétravail a changé beaucoup de choses. Les centres-villes sont plus vides maintenant. C'est dommage pour les petits commerces, mais c'est bien pour les travailleurs qui ne perdent plus de temps dans les transports.",
+    "human_scores": {
+      "Task fulfilment": "A",
+      "Grammatical accuracy": "A",
+      "Lexical resource": "B",
+      "Interactive capability": "B"
+    }
+  }
+]
