@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "spec_id": { "type": "string" },
+    "language": { "type": "string" },
+    "exam_name": { "type": "string" },
+    "cefr": { "type": "string" },
+    "derived": { "type": "boolean" },
+    "verified_on": { "type": ["string", "null"], "format": "date" },
+    "source_url": { "type": "string" },
+    "pass_ratio": { "type": "number", "default": 0.6 },
+    "scale_to": { "type": "integer", "default": 100 },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "skill": { "type": "string" },
+          "duration_min": { "type": "integer" },
+          "order_fixed": { "type": "boolean" },
+          "answer_transfer_min": { "type": "integer" },
+          "parts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "part_no": { "type": "integer" },
+                "title": { "type": "string" },
+                "task_type": { "type": "string" },
+                "item_type": { "type": "string", "enum": ["mcq", "true_false", "yes_no", "matching", "writing", "speaking"] },
+                "item_count": { "type": "integer" },
+                "options_count": { "type": "integer" },
+                "time_min": { "type": "integer" },
+                "text": {
+                  "type": "object",
+                  "properties": {
+                    "kind": { "type": "string" },
+                    "words_min": { "type": "integer" },
+                    "words_max": { "type": "integer" }
+                  },
+                  "required": ["kind", "words_min", "words_max"]
+                },
+                "audio": {
+                  "type": "object",
+                  "properties": {
+                    "segments": { "type": "integer" },
+                    "plays_per_segment": { "type": "integer" },
+                    "preview_seconds": { "type": "integer" },
+                    "speakers": { "type": "integer" },
+                    "kind": { "type": "string" }
+                  },
+                  "required": ["segments", "plays_per_segment", "preview_seconds", "speakers", "kind"]
+                },
+                "writing": {
+                  "type": "object",
+                  "properties": {
+                    "min_words": { "type": "integer" },
+                    "max_words": { "type": "integer" },
+                    "register": { "type": "string" },
+                    "content_points": { "type": "integer" }
+                  },
+                  "required": ["min_words", "max_words", "register", "content_points"]
+                },
+                "speaking": {
+                  "type": "object",
+                  "properties": {
+                    "format": { "type": "string", "enum": ["pair", "examiner"] },
+                    "prep_seconds": { "type": "integer" },
+                    "speaking_seconds": { "type": "integer" },
+                    "slides": { "type": "integer" },
+                    "prompt_points": { "type": "integer" }
+                  },
+                  "required": ["format", "prep_seconds", "speaking_seconds"]
+                },
+                "criteria": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": { "type": "string" },
+                      "max_points": { "type": "integer" }
+                    },
+                    "required": ["name", "max_points"]
+                  }
+                },
+                "verify": { "type": "boolean" }
+              },
+              "required": ["part_no", "title", "task_type", "item_type", "item_count"]
+            }
+          }
+        },
+        "required": ["skill", "duration_min", "order_fixed", "parts"]
+      }
+    }
+  },
+  "required": ["spec_id", "language", "exam_name", "cefr", "derived", "pass_ratio", "scale_to", "sections"]
+}
