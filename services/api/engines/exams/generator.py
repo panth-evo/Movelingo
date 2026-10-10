@@ -145,6 +145,17 @@ def generate_part(spec: dict, section: dict, part: dict, topic_seed: str, langua
                     seg["play_limit"] = spec_audio.get("plays_per_segment", 1)
             
             check_part(part, generated, language)
+            
+            # Cache the valid sample
+            import json
+            from pathlib import Path
+            sample_dir = Path(__file__).resolve().parent.parent.parent.parent / "data" / "exam_specs" / spec_id / "samples"
+            sample_dir.mkdir(parents=True, exist_ok=True)
+            sample_path = sample_dir / f"{skill}_part_{part['part_no']}.json"
+            if not sample_path.exists():
+                with open(sample_path, "w", encoding="utf-8") as f:
+                    json.dump(generated, f, indent=2, ensure_ascii=False)
+                    
             return generated
             
         except (ValueError, LLMError) as e:
