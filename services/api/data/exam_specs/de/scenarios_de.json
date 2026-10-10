@@ -1,0 +1,60 @@
+{
+  "spec_id": "scenarios_de",
+  "language": "de",
+  "exam_name": "MoveLingo Scenarios",
+  "cefr": "B1",
+  "derived": false,
+  "pass_ratio": 0.6,
+  "scale_to": 100,
+  "sections": [
+    {
+      "skill": "speaking",
+      "duration_min": 15,
+      "order_fixed": true,
+      "parts": [
+        {
+          "part_no": 1,
+          "title": "Apartment Viewing",
+          "task_type": "scenario_roleplay",
+          "item_type": "scenario_roleplay",
+          "item_count": 1,
+          "scenario": {
+            "context": "You are viewing an apartment in Berlin.",
+            "persona": "You are a strict but fair German landlord. Keep your answers brief.",
+            "goals": [
+              "Ask about the monthly rent.",
+              "Ask if pets are allowed.",
+              "Arrange a move-in date."
+            ]
+          },
+          "criteria": [
+            {"name": "Task fulfilment", "max_points": 50},
+            {"name": "Language accuracy", "max_points": 50}
+          ],
+          "verify": true
+        },
+        {
+          "part_no": 2,
+          "title": "Visa Interview",
+          "task_type": "scenario_roleplay",
+          "item_type": "scenario_roleplay",
+          "item_count": 1,
+          "scenario": {
+            "context": "You are at the immigration office for a work visa.",
+            "persona": "You are a formal German immigration officer.",
+            "goals": [
+              "State your profession.",
+              "Hand over your contract.",
+              "Ask when the visa will be ready."
+            ]
+          },
+          "criteria": [
+            {"name": "Task fulfilment", "max_points": 50},
+            {"name": "Language accuracy", "max_points": 50}
+          ],
+          "verify": true
+        }
+      ]
+    }
+  ]
+}

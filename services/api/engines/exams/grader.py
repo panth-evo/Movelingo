@@ -174,7 +174,21 @@ def grade_subjective(spec_section: dict, generated_section: dict, user_texts: Di
             }
         else:
             system_prompt = f"You are a strict {cefr} level exam grader for {language}. Grade this {skill} task according to the criteria."
-            user_prompt = f"Task:\n{gen_part}\n\nLearner Text:\n{user_text}\n\nCriteria to grade (A is best, E is worst):\n"
+            
+            task_type = gen_part.get("task_type", "")
+            if task_type == "scenario_roleplay" and "scenario" in gen_part:
+                context = gen_part["scenario"].get("context", "")
+                persona = gen_part["scenario"].get("persona", "")
+                goals = gen_part["scenario"].get("goals", [])
+                goals_str = "\n".join([f"- {g}" for g in goals])
+                user_prompt = (
+                    f"Task is a Scenario Roleplay.\nContext: {context}\nAI Persona: {persona}\nGoals the learner needed to achieve:\n{goals_str}\n\n"
+                    f"Learner Transcript:\n{user_text}\n\n"
+                    "Criteria to grade (A is best, E is worst). Base 'Task fulfilment' strictly on how many goals were naturally achieved:\n"
+                )
+            else:
+                user_prompt = f"Task:\n{gen_part}\n\nLearner Text:\n{user_text}\n\nCriteria to grade (A is best, E is worst):\n"
+                
             for c in criteria:
                 user_prompt += f"- {c['name']} (max {c['max_points']})\n"
                 
