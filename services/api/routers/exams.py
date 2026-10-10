@@ -146,7 +146,14 @@ def submit_paper(paper_id: str, input_data: SubmitExamInput, x_user_id: str = He
     cefr = spec.get("cefr", "B1")
     language = spec.get("language", "de")
     
-    if input_data.skill in ["reading", "listening"]:
+    if input_data.skill == "placement":
+        from engines.exams.grader import grade_placement
+        result = grade_placement(spec_section, target_section, input_data.answers)
+        attempted = sum(len(p.get("items", [])) for p in target_section.get("parts", []))
+        correct = result["raw"]
+        cefr = result.get("placed_level", "A1")
+        pass_ratio = 0.6
+    elif input_data.skill in ["reading", "listening", "grammar"]:
         result = grade_objective(spec_section, target_section, input_data.answers, pass_ratio, scale_to)
         attempted = sum(len(p.get("items", [])) for p in target_section.get("parts", []))
         correct = result["raw"]

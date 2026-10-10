@@ -144,7 +144,7 @@ def generate_part(spec: dict, section: dict, part: dict, topic_seed: str, langua
                 for seg in generated["audio"].get("segments", []):
                     seg["play_limit"] = spec_audio.get("plays_per_segment", 1)
             
-            check_part(part, generated)
+            check_part(part, generated, language)
             return generated
             
         except (ValueError, LLMError) as e:

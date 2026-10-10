@@ -1,7 +1,34 @@
-def check_part(spec_part: dict, generated_part: dict) -> bool:
+STOP_WORDS = {
+    "de": {"der", "die", "das", "und", "ist", "in", "den", "von", "zu", "mit", "sich"},
+    "es": {"el", "la", "los", "las", "y", "en", "es", "por", "para", "con", "un"},
+    "fr": {"le", "la", "les", "et", "est", "en", "du", "au", "des", "un", "une"},
+    "it": {"il", "la", "i", "le", "e", "in", "di", "a", "da", "un", "una"},
+    "en": {"the", "and", "is", "in", "to", "of", "it", "that", "you", "for", "on"}
+}
+
+def check_language(text: str, language: str):
+    if not text or language not in STOP_WORDS: return
+    words = set(text.lower().split())
+    target_stops = STOP_WORDS[language]
+    en_stops = STOP_WORDS["en"]
+    
+    target_count = len(words.intersection(target_stops))
+    en_count = len(words.intersection(en_stops))
+    
+    if en_count > target_count and language != "en":
+        raise ValueError(f"Language guard failed: Expected {language}, but text appears to be English.")
+
+def check_part(spec_part: dict, generated_part: dict, language: str = "de") -> bool:
     """
     Raises ValueError if validation fails, otherwise returns True.
     """
+    if "passage" in generated_part:
+        check_language(generated_part["passage"], language)
+    if "audio" in generated_part:
+        for seg in generated_part["audio"].get("segments", []):
+            for script_line in seg.get("script", []):
+                check_language(script_line.get("text", ""), language)
+                
     # Check item count
     gen_items = generated_part.get("items", [])
     spec_item_count = spec_part.get("item_count", 0)

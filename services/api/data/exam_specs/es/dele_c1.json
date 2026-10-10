@@ -18,37 +18,43 @@
           "task_type": "generic_mcq",
           "item_type": "mcq",
           "item_count": 8,
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 2,
           "task_type": "generic_mcq",
           "item_type": "mcq",
           "item_count": 8,
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 3,
           "task_type": "generic_mcq",
           "item_type": "mcq",
           "item_count": 8,
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 4,
           "task_type": "generic_mcq",
           "item_type": "mcq",
           "item_count": 8,
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 5,
           "task_type": "generic_mcq",
           "item_type": "mcq",
           "item_count": 8,
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         }
-      ]
+      ],
+      "order_fixed": false
     },
     {
       "skill": "listening",
@@ -62,9 +68,12 @@
           "audio": {
             "segments": 3,
             "plays_per_segment": 2,
-            "preview_seconds": 30
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
           },
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 2,
@@ -74,9 +83,12 @@
           "audio": {
             "segments": 3,
             "plays_per_segment": 2,
-            "preview_seconds": 30
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
           },
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 3,
@@ -86,9 +98,12 @@
           "audio": {
             "segments": 3,
             "plays_per_segment": 2,
-            "preview_seconds": 30
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
           },
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 4,
@@ -98,9 +113,12 @@
           "audio": {
             "segments": 3,
             "plays_per_segment": 2,
-            "preview_seconds": 30
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
           },
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 5,
@@ -110,11 +128,15 @@
           "audio": {
             "segments": 3,
             "plays_per_segment": 2,
-            "preview_seconds": 30
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
           },
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         }
-      ]
+      ],
+      "order_fixed": false
     },
     {
       "skill": "writing",
@@ -127,15 +149,18 @@
           "item_count": 1,
           "writing": {
             "min_words": 130,
-            "max_words": 156
+            "max_words": 156,
+            "register": "informal",
+            "content_points": 3
           },
           "criteria": [
             {
               "name": "Task fulfilment",
-              "max_points": 12.5
+              "max_points": 12
             }
           ],
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 2,
@@ -144,17 +169,21 @@
           "item_count": 1,
           "writing": {
             "min_words": 169,
-            "max_words": 195
+            "max_words": 195,
+            "register": "informal",
+            "content_points": 3
           },
           "criteria": [
             {
               "name": "Task fulfilment",
-              "max_points": 12.5
+              "max_points": 12
             }
           ],
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         }
-      ]
+      ],
+      "order_fixed": false
     },
     {
       "skill": "speaking",
@@ -167,15 +196,17 @@
           "item_count": 1,
           "speaking": {
             "format": "examiner",
-            "prep_seconds": 900
+            "prep_seconds": 900,
+            "speaking_seconds": 180
           },
           "criteria": [
             {
               "name": "Task fulfilment",
-              "max_points": 6.25
+              "max_points": 6
             }
           ],
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 2,
@@ -184,15 +215,17 @@
           "item_count": 1,
           "speaking": {
             "format": "examiner",
-            "prep_seconds": 0
+            "prep_seconds": 0,
+            "speaking_seconds": 180
           },
           "criteria": [
             {
               "name": "Task fulfilment",
-              "max_points": 6.25
+              "max_points": 6
             }
           ],
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 3,
@@ -201,15 +234,17 @@
           "item_count": 1,
           "speaking": {
             "format": "examiner",
-            "prep_seconds": 0
+            "prep_seconds": 0,
+            "speaking_seconds": 180
           },
           "criteria": [
             {
               "name": "Task fulfilment",
-              "max_points": 6.25
+              "max_points": 6
             }
           ],
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         },
         {
           "part_no": 4,
@@ -218,17 +253,20 @@
           "item_count": 1,
           "speaking": {
             "format": "examiner",
-            "prep_seconds": 0
+            "prep_seconds": 0,
+            "speaking_seconds": 180
           },
           "criteria": [
             {
               "name": "Task fulfilment",
-              "max_points": 6.25
+              "max_points": 6
             }
           ],
-          "verify": true
+          "verify": true,
+          "title": "Sample Title"
         }
-      ]
+      ],
+      "order_fixed": false
     }
   ]
 }

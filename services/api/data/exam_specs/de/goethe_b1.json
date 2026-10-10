@@ -173,10 +173,22 @@
             "content_points": 3
           },
           "criteria": [
-            { "name": "task fulfilment", "max_points": 25 },
-            { "name": "coherence", "max_points": 25 },
-            { "name": "vocabulary", "max_points": 25 },
-            { "name": "structures", "max_points": 25 }
+            {
+              "name": "task fulfilment",
+              "max_points": 25
+            },
+            {
+              "name": "coherence",
+              "max_points": 25
+            },
+            {
+              "name": "vocabulary",
+              "max_points": 25
+            },
+            {
+              "name": "structures",
+              "max_points": 25
+            }
           ]
         },
         {
@@ -193,10 +205,22 @@
             "content_points": 1
           },
           "criteria": [
-            { "name": "task fulfilment", "max_points": 25 },
-            { "name": "coherence", "max_points": 25 },
-            { "name": "vocabulary", "max_points": 25 },
-            { "name": "structures", "max_points": 25 }
+            {
+              "name": "task fulfilment",
+              "max_points": 25
+            },
+            {
+              "name": "coherence",
+              "max_points": 25
+            },
+            {
+              "name": "vocabulary",
+              "max_points": 25
+            },
+            {
+              "name": "structures",
+              "max_points": 25
+            }
           ]
         },
         {
@@ -213,10 +237,22 @@
             "content_points": 1
           },
           "criteria": [
-            { "name": "task fulfilment", "max_points": 25 },
-            { "name": "coherence", "max_points": 25 },
-            { "name": "vocabulary", "max_points": 25 },
-            { "name": "structures", "max_points": 25 }
+            {
+              "name": "task fulfilment",
+              "max_points": 25
+            },
+            {
+              "name": "coherence",
+              "max_points": 25
+            },
+            {
+              "name": "vocabulary",
+              "max_points": 25
+            },
+            {
+              "name": "structures",
+              "max_points": 25
+            }
           ]
         }
       ]
@@ -239,12 +275,30 @@
             "prompt_points": 4
           },
           "criteria": [
-            { "name": "task fulfilment", "max_points": 16 },
-            { "name": "interaction", "max_points": 16 },
-            { "name": "coherence", "max_points": 17 },
-            { "name": "vocabulary and register", "max_points": 17 },
-            { "name": "structures", "max_points": 17 },
-            { "name": "pronunciation", "max_points": 17 }
+            {
+              "name": "task fulfilment",
+              "max_points": 16
+            },
+            {
+              "name": "interaction",
+              "max_points": 16
+            },
+            {
+              "name": "coherence",
+              "max_points": 17
+            },
+            {
+              "name": "vocabulary and register",
+              "max_points": 17
+            },
+            {
+              "name": "structures",
+              "max_points": 17
+            },
+            {
+              "name": "pronunciation",
+              "max_points": 17
+            }
           ]
         },
         {
@@ -260,12 +314,30 @@
             "slides": 5
           },
           "criteria": [
-            { "name": "task fulfilment", "max_points": 16 },
-            { "name": "interaction", "max_points": 16 },
-            { "name": "coherence", "max_points": 17 },
-            { "name": "vocabulary and register", "max_points": 17 },
-            { "name": "structures", "max_points": 17 },
-            { "name": "pronunciation", "max_points": 17 }
+            {
+              "name": "task fulfilment",
+              "max_points": 16
+            },
+            {
+              "name": "interaction",
+              "max_points": 16
+            },
+            {
+              "name": "coherence",
+              "max_points": 17
+            },
+            {
+              "name": "vocabulary and register",
+              "max_points": 17
+            },
+            {
+              "name": "structures",
+              "max_points": 17
+            },
+            {
+              "name": "pronunciation",
+              "max_points": 17
+            }
           ]
         },
         {
@@ -280,12 +352,30 @@
             "speaking_seconds": 120
           },
           "criteria": [
-            { "name": "task fulfilment", "max_points": 16 },
-            { "name": "interaction", "max_points": 16 },
-            { "name": "coherence", "max_points": 17 },
-            { "name": "vocabulary and register", "max_points": 17 },
-            { "name": "structures", "max_points": 17 },
-            { "name": "pronunciation", "max_points": 17 }
+            {
+              "name": "task fulfilment",
+              "max_points": 16
+            },
+            {
+              "name": "interaction",
+              "max_points": 16
+            },
+            {
+              "name": "coherence",
+              "max_points": 17
+            },
+            {
+              "name": "vocabulary and register",
+              "max_points": 17
+            },
+            {
+              "name": "structures",
+              "max_points": 17
+            },
+            {
+              "name": "pronunciation",
+              "max_points": 17
+            }
           ]
         }
       ]

@@ -7,6 +7,54 @@ from ai.llm_client import generate_json, LLMError
 
 logger = logging.getLogger(__name__)
 
+def grade_placement(spec_section: dict, generated_section: dict, user_answers: Dict[str, List[str]]) -> dict:
+    level_stats = {"A1": {"raw": 0, "max": 0}, "A2": {"raw": 0, "max": 0}, "B1": {"raw": 0, "max": 0}, "B2": {"raw": 0, "max": 0}}
+    parts_map = {str(p["part_no"]): p for p in generated_section.get("parts", [])}
+    spec_parts_map = {str(p["part_no"]): p for p in spec_section.get("parts", [])}
+    total_raw = 0
+    total_max = 0
+    
+    for part_str, ans_list in user_answers.items():
+        part = parts_map.get(part_str)
+        spec_part = spec_parts_map.get(part_str)
+        if not part or not spec_part:
+            continue
+            
+        items_data = spec_part.get("items_data", [])
+        items = part.get("items", [])
+        for i, item in enumerate(items):
+            level = items_data[i]["level"] if i < len(items_data) else "A1"
+            if level not in level_stats:
+                continue
+            level_stats[level]["max"] += 1
+            total_max += 1
+            user_ans = ans_list[i] if i < len(ans_list) else None
+            correct_opt = next((opt for opt in item.get("options", []) if opt.get("is_correct")), None)
+            if correct_opt and user_ans and user_ans.strip().lower() == correct_opt["key"].strip().lower():
+                level_stats[level]["raw"] += 1
+                total_raw += 1
+                
+    placed_level = "A0"
+    levels_in_order = ["A1", "A2", "B1", "B2"]
+    for lvl in levels_in_order:
+        stats = level_stats[lvl]
+        if stats["max"] > 0 and (stats["raw"] / stats["max"]) >= 0.6:
+            placed_level = lvl
+        else:
+            break
+            
+    return {
+        "raw": total_raw,
+        "max_points": total_max,
+        "ratio": total_raw / total_max if total_max > 0 else 0,
+        "scaled_100": round(100 * (total_raw / total_max)) if total_max > 0 else 0,
+        "passed": placed_level != "A0",
+        "placed_level": placed_level,
+        "level_stats": level_stats,
+        "pass_ratio": 0.6,
+        "per_part": {}
+    }
+
 def grade_objective(spec_section: dict, generated_section: dict, user_answers: Dict[str, List[str]], pass_ratio: float, scale_to: int = 100) -> dict:
     """
     user_answers maps part_no (as string) to a list of answer keys.

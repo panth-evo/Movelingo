@@ -1,0 +1,87 @@
+{
+  "spec_id": "placement_it",
+  "language": "it",
+  "exam_name": "Placement Test",
+  "cefr": "mixed",
+  "derived": false,
+  "pass_ratio": 0.6,
+  "scale_to": 100,
+  "sections": [
+    {
+      "skill": "placement",
+      "duration_min": 20,
+      "order_fixed": true,
+      "parts": [
+        {
+          "part_no": 1,
+          "title": "Mixed objective items",
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 20,
+          "items_data": [
+            {
+              "level": "A1"
+            },
+            {
+              "level": "A1"
+            },
+            {
+              "level": "A1"
+            },
+            {
+              "level": "A1"
+            },
+            {
+              "level": "A1"
+            },
+            {
+              "level": "A2"
+            },
+            {
+              "level": "A2"
+            },
+            {
+              "level": "A2"
+            },
+            {
+              "level": "A2"
+            },
+            {
+              "level": "A2"
+            },
+            {
+              "level": "B1"
+            },
+            {
+              "level": "B1"
+            },
+            {
+              "level": "B1"
+            },
+            {
+              "level": "B1"
+            },
+            {
+              "level": "B1"
+            },
+            {
+              "level": "B2"
+            },
+            {
+              "level": "B2"
+            },
+            {
+              "level": "B2"
+            },
+            {
+              "level": "B2"
+            },
+            {
+              "level": "B2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

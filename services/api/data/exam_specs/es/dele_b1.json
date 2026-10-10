@@ -13,41 +13,260 @@
       "skill": "reading",
       "duration_min": 70,
       "parts": [
-        { "part_no": 1, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
-        { "part_no": 2, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
-        { "part_no": 3, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
-        { "part_no": 4, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
-        { "part_no": 5, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true }
-      ]
+        {
+          "part_no": 1,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 2,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 3,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 4,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 5,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true,
+          "title": "Sample Title"
+        }
+      ],
+      "order_fixed": false
     },
     {
       "skill": "listening",
       "duration_min": 40,
       "parts": [
-        { "part_no": 1, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
-        { "part_no": 2, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
-        { "part_no": 3, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
-        { "part_no": 4, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
-        { "part_no": 5, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true }
-      ]
+        {
+          "part_no": 1,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 3,
+            "plays_per_segment": 2,
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
+          },
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 2,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 3,
+            "plays_per_segment": 2,
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
+          },
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 3,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 3,
+            "plays_per_segment": 2,
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
+          },
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 4,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 3,
+            "plays_per_segment": 2,
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
+          },
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 5,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 3,
+            "plays_per_segment": 2,
+            "preview_seconds": 30,
+            "speakers": 1,
+            "kind": "dialogue"
+          },
+          "verify": true,
+          "title": "Sample Title"
+        }
+      ],
+      "order_fixed": false
     },
     {
       "skill": "writing",
       "duration_min": 60,
       "parts": [
-        { "part_no": 1, "task_type": "writing", "item_type": "writing", "item_count": 1, "writing": {"min_words": 100, "max_words": 120}, "criteria": [{"name": "Task fulfilment", "max_points": 12.5}], "verify": true },
-        { "part_no": 2, "task_type": "writing", "item_type": "writing", "item_count": 1, "writing": {"min_words": 130, "max_words": 150}, "criteria": [{"name": "Task fulfilment", "max_points": 12.5}], "verify": true }
-      ]
+        {
+          "part_no": 1,
+          "task_type": "writing",
+          "item_type": "writing",
+          "item_count": 1,
+          "writing": {
+            "min_words": 100,
+            "max_words": 120,
+            "register": "informal",
+            "content_points": 3
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 12
+            }
+          ],
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 2,
+          "task_type": "writing",
+          "item_type": "writing",
+          "item_count": 1,
+          "writing": {
+            "min_words": 130,
+            "max_words": 150,
+            "register": "informal",
+            "content_points": 3
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 12
+            }
+          ],
+          "verify": true,
+          "title": "Sample Title"
+        }
+      ],
+      "order_fixed": false
     },
     {
       "skill": "speaking",
       "duration_min": 15,
       "parts": [
-        { "part_no": 1, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 900}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true },
-        { "part_no": 2, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true },
-        { "part_no": 3, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true },
-        { "part_no": 4, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true }
-      ]
+        {
+          "part_no": 1,
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "examiner",
+            "prep_seconds": 900,
+            "speaking_seconds": 180
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 6
+            }
+          ],
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 2,
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "examiner",
+            "prep_seconds": 0,
+            "speaking_seconds": 180
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 6
+            }
+          ],
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 3,
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "examiner",
+            "prep_seconds": 0,
+            "speaking_seconds": 180
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 6
+            }
+          ],
+          "verify": true,
+          "title": "Sample Title"
+        },
+        {
+          "part_no": 4,
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "examiner",
+            "prep_seconds": 0,
+            "speaking_seconds": 180
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 6
+            }
+          ],
+          "verify": true,
+          "title": "Sample Title"
+        }
+      ],
+      "order_fixed": false
     }
   ]
 }
