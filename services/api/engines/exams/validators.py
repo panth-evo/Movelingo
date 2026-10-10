@@ -18,16 +18,61 @@ def check_language(text: str, language: str):
     if en_count > target_count and language != "en":
         raise ValueError(f"Language guard failed: Expected {language}, but text appears to be English.")
 
-def check_part(spec_part: dict, generated_part: dict, language: str = "de") -> bool:
+import json
+from pathlib import Path
+
+_lexicon_cache = {}
+
+def get_lexicon(language: str):
+    if language not in _lexicon_cache:
+        path = Path(__file__).resolve().parent.parent.parent / "data" / "knowledge" / f"lexicon_{language}.json"
+        if path.exists():
+            with open(path, "r", encoding="utf-8") as f:
+                _lexicon_cache[language] = json.load(f)
+        else:
+            _lexicon_cache[language] = {}
+    return _lexicon_cache[language]
+
+def check_vocabulary(text: str, language: str, cefr: str):
+    lexicon = get_lexicon(language)
+    if not lexicon:
+        return
+        
+    cefr_levels = ["A1", "A2", "B1", "B2", "C1", "C2"]
+    if cefr.upper() not in cefr_levels:
+        return
+        
+    target_idx = cefr_levels.index(cefr.upper())
+    words = text.lower().replace(".", "").replace(",", "").replace("?", "").replace("!", "").split()
+    
+    out_of_level = 0
+    for w in words:
+        word_level_idx = -1
+        for i, lvl in enumerate(cefr_levels):
+            if lvl in lexicon and w in lexicon[lvl]:
+                word_level_idx = i
+                break
+        
+        if word_level_idx > target_idx:
+            out_of_level += 1
+            
+    ratio = out_of_level / len(words) if words else 0
+    if ratio > 0.1:
+        raise ValueError(f"Vocabulary too advanced for {cefr}. {out_of_level} words exceed target level.")
+
+def check_part(spec_part: dict, generated_part: dict, language: str = "de", cefr: str = "B1") -> bool:
     """
     Raises ValueError if validation fails, otherwise returns True.
     """
     if "passage" in generated_part:
         check_language(generated_part["passage"], language)
+        check_vocabulary(generated_part["passage"], language, cefr)
     if "audio" in generated_part:
         for seg in generated_part["audio"].get("segments", []):
             for script_line in seg.get("script", []):
-                check_language(script_line.get("text", ""), language)
+                text = script_line.get("text", "")
+                check_language(text, language)
+                check_vocabulary(text, language, cefr)
                 
     # Check item count
     gen_items = generated_part.get("items", [])

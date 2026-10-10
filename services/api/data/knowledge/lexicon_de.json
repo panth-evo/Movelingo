@@ -1,0 +1,7 @@
+{
+  "A1": ["hallo", "ja", "nein", "danke", "bitte", "haus", "auto", "hund", "katze", "essen", "trinken", "gehen", "kommen"],
+  "A2": ["weil", "aber", "oder", "und", "gestern", "morgen", "heute", "schnell", "langsam", "arbeiten", "kaufen"],
+  "B1": ["obwohl", "trotzdem", "deshalb", "erfahrung", "entscheidung", "erfolgreich", "bewerbung", "unternehmen"],
+  "B2": ["anerkennung", "voraussetzung", "herausforderung", "komplex", "analysieren", "zusammenhang"],
+  "C1": ["paradigma", "diskurs", "ambivalent", "implikation", "kontingenz"]
+}

@@ -28,7 +28,7 @@
                 "part_no": { "type": "integer" },
                 "title": { "type": "string" },
                 "task_type": { "type": "string" },
-                "item_type": { "type": "string", "enum": ["mcq", "true_false", "yes_no", "matching", "writing", "speaking", "scenario_roleplay"] },
+                "item_type": { "type": "string", "enum": ["mcq", "true_false", "yes_no", "matching", "writing", "speaking", "scenario_roleplay", "civic_integration"] },
                 "item_count": { "type": "integer" },
                 "options_count": { "type": "integer" },
                 "time_min": { "type": "integer" },

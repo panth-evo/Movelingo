@@ -53,6 +53,27 @@
             {"name": "Language accuracy", "max_points": 50}
           ],
           "verify": true
+        },
+        {
+          "part_no": 3,
+          "title": "Leben in Deutschland",
+          "task_type": "civic_integration",
+          "item_type": "civic_integration",
+          "item_count": 1,
+          "scenario": {
+            "context": "You are taking the 'Leben in Deutschland' civic integration test.",
+            "persona": "You are a neutral examiner asking standard civic questions from the official test.",
+            "goals": [
+              "Answer a question about the German constitution.",
+              "Answer a question about the political system.",
+              "Answer a question about recent German history."
+            ]
+          },
+          "criteria": [
+            {"name": "Task fulfilment", "max_points": 50},
+            {"name": "Factual Accuracy", "max_points": 50}
+          ],
+          "verify": true
         }
       ]
     }
