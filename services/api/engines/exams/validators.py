@@ -45,9 +45,17 @@ def check_part(spec_part: dict, generated_part: dict) -> bool:
     # Check audio segments
     if "audio" in spec_part and "audio" in generated_part:
         spec_segments = spec_part["audio"]["segments"]
-        gen_segments = len(generated_part["audio"].get("segments", []))
+        segments = generated_part["audio"].get("segments", [])
+        gen_segments = len(segments)
         if gen_segments != spec_segments:
             raise ValueError(f"Expected {spec_segments} audio segments, got {gen_segments}")
+            
+        valid_seg_ids = {s.get("segment_id") for s in segments if s.get("segment_id")}
+        for i, item in enumerate(gen_items):
+            if "segment_id" not in item:
+                raise ValueError(f"Item {i} is missing segment_id")
+            if item["segment_id"] not in valid_seg_ids:
+                raise ValueError(f"Item {i} has invalid segment_id '{item.get('segment_id')}'")
 
     # Check writing tasks
     if "writing" in spec_part and "task" in generated_part:

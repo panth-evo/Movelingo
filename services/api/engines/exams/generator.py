@@ -83,7 +83,13 @@ def generate_part(spec: dict, section: dict, part: dict, topic_seed: str, langua
     skill = section.get("skill")
     
     if mode == "mock":
-        return _build_mock_part(part, skill)
+        generated = _build_mock_part(part, skill)
+        if skill == "listening" and "audio" in generated:
+            spec_audio = part.get("audio", {})
+            generated["audio"]["preview_seconds"] = spec_audio.get("preview_seconds", 0)
+            for seg in generated["audio"].get("segments", []):
+                seg["play_limit"] = spec_audio.get("plays_per_segment", 1)
+        return generated
 
     topic = get_random_topic(topic_seed)
     
@@ -131,6 +137,12 @@ def generate_part(spec: dict, section: dict, part: dict, topic_seed: str, langua
                 schema=ITEM_SCHEMA,
                 max_retries=1
             )
+            
+            if skill == "listening" and "audio" in generated:
+                spec_audio = part.get("audio", {})
+                generated["audio"]["preview_seconds"] = spec_audio.get("preview_seconds", 0)
+                for seg in generated["audio"].get("segments", []):
+                    seg["play_limit"] = spec_audio.get("plays_per_segment", 1)
             
             check_part(part, generated)
             return generated
