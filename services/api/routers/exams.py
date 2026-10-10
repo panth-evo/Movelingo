@@ -224,3 +224,59 @@ def get_results(language: str, x_user_id: str = Header(default="test_user")):
             "passed": r.passed
         } for r in results
     ]
+
+@router.get("/papers/{paper_id}/report")
+def get_paper_report(paper_id: str, x_user_id: str = Header(default="test_user")):
+    db = SessionLocal()
+    paper = db.query(ExamPaperModel).filter(ExamPaperModel.paper_id == paper_id).first()
+    if not paper:
+        db.close()
+        raise HTTPException(status_code=404, detail="Paper not found")
+        
+    results = db.query(ExamResultModel).filter(ExamResultModel.paper_id == paper_id).all()
+    db.close()
+    
+    if not results:
+        return {"paper_id": paper_id, "status": "no_results_yet"}
+        
+    overall_raw = 0
+    overall_max = 0
+    weakness_flags = []
+    skill_breakdown = {}
+    
+    for r in results:
+        overall_raw += r.raw
+        overall_max += r.max_points
+        skill_breakdown[r.skill] = {
+            "scaled_100": r.scaled_100,
+            "passed": r.passed,
+            "level": r.level
+        }
+        
+        # Detect weaknesses
+        if r.skill in ["reading", "listening", "grammar", "placement"]:
+            if r.ratio < 0.5:
+                weakness_flags.append(f"{r.level}_{r.skill}_comprehension")
+                
+        if r.skill in ["writing", "speaking", "scenario_roleplay"]:
+            for part_no, part_data in r.per_part.items():
+                for crit in part_data.get("criteria", []):
+                    if crit.get("band") in ["C", "D", "E"]:
+                        crit_name_safe = crit.get("name", "").replace(" ", "_").lower()
+                        weakness_flags.append(f"{r.level}_{r.skill}_{crit_name_safe}")
+                        
+    # Deduplicate weaknesses
+    weakness_flags = list(set(weakness_flags))
+    
+    report = {
+        "paper_id": paper_id,
+        "exam_name": paper.internal_json.get("exam_name"),
+        "language": paper.internal_json.get("language"),
+        "cefr": paper.internal_json.get("cefr"),
+        "overall_score": round(100 * overall_raw / overall_max) if overall_max > 0 else 0,
+        "skill_breakdown": skill_breakdown,
+        "weaknesses_for_learner_twin": weakness_flags,
+        "status": "completed"
+    }
+    
+    return report
