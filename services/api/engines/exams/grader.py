@@ -173,7 +173,14 @@ def grade_subjective(spec_section: dict, generated_section: dict, user_texts: Di
                 "summary": "Mock summary"
             }
         else:
-            system_prompt = f"You are a strict {cefr} level exam grader for {language}. Grade this {skill} task according to the criteria."
+            from engines.exams.rag import retrieve_cefr_rubrics
+            rag_rubrics = retrieve_cefr_rubrics(skill, cefr)
+            
+            system_prompt = (
+                f"You are a strict {cefr} level exam grader for {language}. Grade this {skill} task according to the criteria.\n\n"
+                f"{rag_rubrics}\n"
+                "You MUST base your grading entirely on these official descriptors. Explicitly cite them in your feedback to justify the band awarded."
+            )
             
             task_type = gen_part.get("task_type", "")
             if task_type == "scenario_roleplay" and "scenario" in gen_part:

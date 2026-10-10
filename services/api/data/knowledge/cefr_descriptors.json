@@ -1,0 +1,67 @@
+{
+  "A1": {
+    "writing": {
+      "Task fulfilment": "Can convey simple, basic information on familiar topics. Uses short, isolated sentences.",
+      "Grammatical accuracy": "Shows only limited control of a few simple grammatical structures and sentence patterns.",
+      "Lexical resource": "Has a basic vocabulary repertoire of isolated words and phrases related to particular concrete situations."
+    },
+    "speaking": {
+      "Task fulfilment": "Can interact in a simple way provided the other person talks slowly and clearly. Can ask and answer simple questions.",
+      "Grammatical accuracy": "Shows only limited control of a few simple grammatical structures and sentence patterns.",
+      "Lexical resource": "Has a basic vocabulary repertoire of isolated words and phrases related to particular concrete situations.",
+      "Interactive capability": "Can manage very short, isolated, mainly pre-packaged utterances, with much pausing to search for expressions."
+    }
+  },
+  "A2": {
+    "writing": {
+      "Task fulfilment": "Can write a series of simple phrases and sentences linked with simple connectors like 'and', 'but' and 'because'.",
+      "Grammatical accuracy": "Uses some simple structures correctly, but still systematically makes basic mistakes.",
+      "Lexical resource": "Has sufficient vocabulary to conduct routine, everyday transactions involving familiar situations."
+    },
+    "speaking": {
+      "Task fulfilment": "Can communicate in simple and routine tasks requiring a simple and direct exchange of information.",
+      "Grammatical accuracy": "Uses some simple structures correctly, but still systematically makes basic mistakes.",
+      "Lexical resource": "Has sufficient vocabulary to conduct routine, everyday transactions involving familiar situations.",
+      "Interactive capability": "Can answer questions and respond to simple statements. Can indicate when they are following."
+    }
+  },
+  "B1": {
+    "writing": {
+      "Task fulfilment": "Can write straightforward connected text on topics which are familiar or of personal interest.",
+      "Grammatical accuracy": "Communicates with reasonable accuracy in familiar contexts; generally good control though with noticeable mother tongue influence.",
+      "Lexical resource": "Has a sufficient vocabulary to express themselves with some circumlocutions on most topics pertinent to their everyday life."
+    },
+    "speaking": {
+      "Task fulfilment": "Can deal with most situations likely to arise whilst travelling. Can enter unprepared into conversation on familiar topics.",
+      "Grammatical accuracy": "Communicates with reasonable accuracy in familiar contexts; generally good control though with noticeable mother tongue influence.",
+      "Lexical resource": "Has a sufficient vocabulary to express themselves with some circumlocutions on most topics pertinent to their everyday life.",
+      "Interactive capability": "Can start, maintain and close simple face-to-face conversation on topics that are familiar or of personal interest."
+    }
+  },
+  "B2": {
+    "writing": {
+      "Task fulfilment": "Can write clear, detailed text on a wide range of subjects related to their interests. Can explain a viewpoint on a topical issue.",
+      "Grammatical accuracy": "Shows a relatively high degree of grammatical control. Does not make errors which cause misunderstanding.",
+      "Lexical resource": "Has a good range of vocabulary for matters connected to their field and most general topics."
+    },
+    "speaking": {
+      "Task fulfilment": "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible.",
+      "Grammatical accuracy": "Shows a relatively high degree of grammatical control. Does not make errors which cause misunderstanding.",
+      "Lexical resource": "Has a good range of vocabulary for matters connected to their field and most general topics.",
+      "Interactive capability": "Can take an active part in informal discussion in familiar contexts, commenting, putting point of view clearly."
+    }
+  },
+  "C1": {
+    "writing": {
+      "Task fulfilment": "Can express themselves in clear, well-structured text, expressing points of view at some length.",
+      "Grammatical accuracy": "Consistently maintains a high degree of grammatical accuracy; errors are rare and difficult to spot.",
+      "Lexical resource": "Has a good command of a broad lexical repertoire allowing gaps to be readily overcome with circumlocutions."
+    },
+    "speaking": {
+      "Task fulfilment": "Can express themselves fluently and spontaneously almost effortlessly. Can use language flexibly and effectively.",
+      "Grammatical accuracy": "Consistently maintains a high degree of grammatical accuracy; errors are rare and difficult to spot.",
+      "Lexical resource": "Has a good command of a broad lexical repertoire allowing gaps to be readily overcome with circumlocutions.",
+      "Interactive capability": "Can select a suitable phrase from a readily available range of discourse functions to preface their remarks in order to get or keep the floor."
+    }
+  }
+}
