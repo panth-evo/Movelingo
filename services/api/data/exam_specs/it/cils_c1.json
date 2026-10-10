@@ -1,0 +1,196 @@
+{
+  "spec_id": "cils_c1",
+  "language": "it",
+  "exam_name": "CILS UNO-C1",
+  "cefr": "C1",
+  "derived": true,
+  "verified_on": "2026-10-10",
+  "source_url": "Siena CILS",
+  "pass_ratio": 0.6,
+  "scale_to": 100,
+  "sections": [
+    {
+      "skill": "listening",
+      "duration_min": 40,
+      "parts": [
+        {
+          "part_no": 1,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 1,
+            "plays_per_segment": 2,
+            "preview_seconds": 30
+          },
+          "verify": true
+        },
+        {
+          "part_no": 2,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 1,
+            "plays_per_segment": 2,
+            "preview_seconds": 30
+          },
+          "verify": true
+        },
+        {
+          "part_no": 3,
+          "task_type": "short_texts",
+          "item_type": "mcq",
+          "item_count": 6,
+          "audio": {
+            "segments": 1,
+            "plays_per_segment": 2,
+            "preview_seconds": 30
+          },
+          "verify": true
+        }
+      ]
+    },
+    {
+      "skill": "reading",
+      "duration_min": 65,
+      "parts": [
+        {
+          "part_no": 1,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true
+        },
+        {
+          "part_no": 2,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true
+        },
+        {
+          "part_no": 3,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true
+        }
+      ]
+    },
+    {
+      "skill": "grammar",
+      "duration_min": 40,
+      "parts": [
+        {
+          "part_no": 1,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true
+        },
+        {
+          "part_no": 2,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true
+        },
+        {
+          "part_no": 3,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true
+        },
+        {
+          "part_no": 4,
+          "task_type": "generic_mcq",
+          "item_type": "mcq",
+          "item_count": 6,
+          "verify": true
+        }
+      ]
+    },
+    {
+      "skill": "writing",
+      "duration_min": 90,
+      "parts": [
+        {
+          "part_no": 1,
+          "task_type": "writing",
+          "item_type": "writing",
+          "item_count": 1,
+          "writing": {
+            "min_words": 130,
+            "max_words": 195
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 25
+            }
+          ],
+          "verify": true
+        },
+        {
+          "part_no": 2,
+          "task_type": "writing",
+          "item_type": "writing",
+          "item_count": 1,
+          "writing": {
+            "min_words": 130,
+            "max_words": 195
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 25
+            }
+          ],
+          "verify": true
+        }
+      ]
+    },
+    {
+      "skill": "speaking",
+      "duration_min": 15,
+      "parts": [
+        {
+          "part_no": 1,
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "examiner",
+            "prep_seconds": 0
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 12.5
+            }
+          ],
+          "verify": true
+        },
+        {
+          "part_no": 2,
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "examiner",
+            "prep_seconds": 0
+          },
+          "criteria": [
+            {
+              "name": "Task fulfilment",
+              "max_points": 12.5
+            }
+          ],
+          "verify": true
+        }
+      ]
+    }
+  ]
+}

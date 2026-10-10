@@ -1,0 +1,53 @@
+{
+  "spec_id": "dele_b1",
+  "language": "es",
+  "exam_name": "DELE B1",
+  "cefr": "B1",
+  "derived": false,
+  "verified_on": "2026-10-10",
+  "source_url": "Instituto Cervantes structure card",
+  "pass_ratio": 0.6,
+  "scale_to": 25,
+  "sections": [
+    {
+      "skill": "reading",
+      "duration_min": 70,
+      "parts": [
+        { "part_no": 1, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
+        { "part_no": 2, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
+        { "part_no": 3, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
+        { "part_no": 4, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true },
+        { "part_no": 5, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 6, "verify": true }
+      ]
+    },
+    {
+      "skill": "listening",
+      "duration_min": 40,
+      "parts": [
+        { "part_no": 1, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
+        { "part_no": 2, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
+        { "part_no": 3, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
+        { "part_no": 4, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
+        { "part_no": 5, "task_type": "short_texts", "item_type": "mcq", "item_count": 6, "audio": {"segments": 3, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true }
+      ]
+    },
+    {
+      "skill": "writing",
+      "duration_min": 60,
+      "parts": [
+        { "part_no": 1, "task_type": "writing", "item_type": "writing", "item_count": 1, "writing": {"min_words": 100, "max_words": 120}, "criteria": [{"name": "Task fulfilment", "max_points": 12.5}], "verify": true },
+        { "part_no": 2, "task_type": "writing", "item_type": "writing", "item_count": 1, "writing": {"min_words": 130, "max_words": 150}, "criteria": [{"name": "Task fulfilment", "max_points": 12.5}], "verify": true }
+      ]
+    },
+    {
+      "skill": "speaking",
+      "duration_min": 15,
+      "parts": [
+        { "part_no": 1, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 900}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true },
+        { "part_no": 2, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true },
+        { "part_no": 3, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true },
+        { "part_no": 4, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 6.25}], "verify": true }
+      ]
+    }
+  ]
+}

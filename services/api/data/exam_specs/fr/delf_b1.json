@@ -1,0 +1,46 @@
+{
+  "spec_id": "delf_b1",
+  "language": "fr",
+  "exam_name": "DELF B1",
+  "cefr": "B1",
+  "derived": false,
+  "verified_on": "2026-10-10",
+  "source_url": "France Education international",
+  "pass_ratio": 0.5,
+  "scale_to": 25,
+  "sections": [
+    {
+      "skill": "listening",
+      "duration_min": 25,
+      "parts": [
+        { "part_no": 1, "task_type": "short_texts", "item_type": "mcq", "item_count": 5, "audio": {"segments": 1, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
+        { "part_no": 2, "task_type": "short_texts", "item_type": "mcq", "item_count": 5, "audio": {"segments": 1, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true },
+        { "part_no": 3, "task_type": "short_texts", "item_type": "mcq", "item_count": 5, "audio": {"segments": 1, "plays_per_segment": 2, "preview_seconds": 30}, "verify": true }
+      ]
+    },
+    {
+      "skill": "reading",
+      "duration_min": 45,
+      "parts": [
+        { "part_no": 1, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 5, "verify": true },
+        { "part_no": 2, "task_type": "generic_mcq", "item_type": "mcq", "item_count": 5, "verify": true }
+      ]
+    },
+    {
+      "skill": "writing",
+      "duration_min": 45,
+      "parts": [
+        { "part_no": 1, "task_type": "writing", "item_type": "writing", "item_count": 1, "writing": {"min_words": 160, "max_words": 200}, "criteria": [{"name": "Task fulfilment", "max_points": 25}], "verify": true }
+      ]
+    },
+    {
+      "skill": "speaking",
+      "duration_min": 15,
+      "parts": [
+        { "part_no": 1, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 600}, "criteria": [{"name": "Task fulfilment", "max_points": 8.33}], "verify": true },
+        { "part_no": 2, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 8.33}], "verify": true },
+        { "part_no": 3, "task_type": "speaking", "item_type": "speaking", "item_count": 1, "speaking": {"format": "examiner", "prep_seconds": 0}, "criteria": [{"name": "Task fulfilment", "max_points": 8.34}], "verify": true }
+      ]
+    }
+  ]
+}

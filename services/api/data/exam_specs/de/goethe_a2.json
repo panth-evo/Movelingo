@@ -1,0 +1,384 @@
+{
+  "spec_id": "goethe_a2",
+  "language": "de",
+  "exam_name": "Goethe-Zertifikat A2",
+  "cefr": "A2",
+  "derived": true,
+  "verified_on": "2026-10-10",
+  "source_url": "Goethe-Institut model test for adults (2016 edition)",
+  "pass_ratio": 0.6,
+  "scale_to": 100,
+  "sections": [
+    {
+      "skill": "reading",
+      "duration_min": 50,
+      "order_fixed": false,
+      "parts": [
+        {
+          "part_no": 1,
+          "title": "Part 1",
+          "task_type": "true_false_email",
+          "item_type": "true_false",
+          "item_count": 5,
+          "time_min": 10,
+          "text": {
+            "kind": "Email from a friend",
+            "words_min": 200,
+            "words_max": 280
+          },
+          "verify": true
+        },
+        {
+          "part_no": 2,
+          "title": "Part 2",
+          "task_type": "mcq_text",
+          "item_type": "mcq",
+          "item_count": 5,
+          "options_count": 3,
+          "time_min": 20,
+          "text": {
+            "kind": "Two press texts",
+            "words_min": 240,
+            "words_max": 320
+          },
+          "verify": true
+        },
+        {
+          "part_no": 3,
+          "title": "Part 3",
+          "task_type": "matching_ads",
+          "item_type": "matching",
+          "item_count": 6,
+          "options_count": 10,
+          "time_min": 10,
+          "text": {
+            "kind": "7 situations matched to 10 ads",
+            "words_min": 160,
+            "words_max": 240
+          },
+          "verify": true
+        },
+        {
+          "part_no": 4,
+          "title": "Part 4",
+          "task_type": "yes_no_opinions",
+          "item_type": "yes_no",
+          "item_count": 6,
+          "time_min": 15,
+          "text": {
+            "kind": "7 forum comments on one question",
+            "words_min": 240,
+            "words_max": 320
+          },
+          "verify": true
+        },
+        {
+          "part_no": 5,
+          "title": "Part 5",
+          "task_type": "mcq_notice",
+          "item_type": "mcq",
+          "item_count": 3,
+          "options_count": 3,
+          "time_min": 10,
+          "text": {
+            "kind": "Notice or house rules",
+            "words_min": 80,
+            "words_max": 120
+          },
+          "verify": true
+        }
+      ]
+    },
+    {
+      "skill": "listening",
+      "duration_min": 30,
+      "order_fixed": true,
+      "answer_transfer_min": 5,
+      "parts": [
+        {
+          "part_no": 1,
+          "title": "Part 1",
+          "task_type": "short_texts",
+          "item_type": "true_false",
+          "item_count": 8,
+          "audio": {
+            "segments": 5,
+            "plays_per_segment": 2,
+            "preview_seconds": 10,
+            "speakers": 1,
+            "kind": "5 short texts (voicemail, radio, station announcement)"
+          }
+        },
+        {
+          "part_no": 2,
+          "title": "Part 2",
+          "task_type": "talk_or_announcement",
+          "item_type": "mcq",
+          "item_count": 4,
+          "options_count": 3,
+          "audio": {
+            "segments": 1,
+            "plays_per_segment": 1,
+            "preview_seconds": 60,
+            "speakers": 1,
+            "kind": "One talk or announcement"
+          }
+        },
+        {
+          "part_no": 3,
+          "title": "Part 3",
+          "task_type": "conversation_two_speakers",
+          "item_type": "true_false",
+          "item_count": 6,
+          "audio": {
+            "segments": 1,
+            "plays_per_segment": 1,
+            "preview_seconds": 60,
+            "speakers": 2,
+            "kind": "One conversation between two people"
+          }
+        },
+        {
+          "part_no": 4,
+          "title": "Part 4",
+          "task_type": "discussion_three_speakers",
+          "item_type": "matching",
+          "item_count": 6,
+          "audio": {
+            "segments": 1,
+            "plays_per_segment": 2,
+            "preview_seconds": 60,
+            "speakers": 3,
+            "kind": "Radio discussion, 3 speakers, who says what"
+          }
+        }
+      ]
+    },
+    {
+      "skill": "writing",
+      "duration_min": 50,
+      "order_fixed": true,
+      "parts": [
+        {
+          "part_no": 1,
+          "title": "Part 1",
+          "task_type": "writing",
+          "item_type": "writing",
+          "item_count": 1,
+          "time_min": 20,
+          "writing": {
+            "min_words": 64,
+            "max_words": 96,
+            "register": "informal",
+            "content_points": 3
+          },
+          "criteria": [
+            {
+              "name": "task fulfilment",
+              "max_points": 25
+            },
+            {
+              "name": "coherence",
+              "max_points": 25
+            },
+            {
+              "name": "vocabulary",
+              "max_points": 25
+            },
+            {
+              "name": "structures",
+              "max_points": 25
+            }
+          ]
+        },
+        {
+          "part_no": 2,
+          "title": "Part 2",
+          "task_type": "writing",
+          "item_type": "writing",
+          "item_count": 1,
+          "time_min": 25,
+          "writing": {
+            "min_words": 64,
+            "max_words": 96,
+            "register": "formal or informal",
+            "content_points": 1
+          },
+          "criteria": [
+            {
+              "name": "task fulfilment",
+              "max_points": 25
+            },
+            {
+              "name": "coherence",
+              "max_points": 25
+            },
+            {
+              "name": "vocabulary",
+              "max_points": 25
+            },
+            {
+              "name": "structures",
+              "max_points": 25
+            }
+          ]
+        },
+        {
+          "part_no": 3,
+          "title": "Part 3",
+          "task_type": "writing",
+          "item_type": "writing",
+          "item_count": 1,
+          "time_min": 15,
+          "writing": {
+            "min_words": 32,
+            "max_words": 48,
+            "register": "formal",
+            "content_points": 1
+          },
+          "criteria": [
+            {
+              "name": "task fulfilment",
+              "max_points": 25
+            },
+            {
+              "name": "coherence",
+              "max_points": 25
+            },
+            {
+              "name": "vocabulary",
+              "max_points": 25
+            },
+            {
+              "name": "structures",
+              "max_points": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "speaking",
+      "duration_min": 25,
+      "order_fixed": true,
+      "parts": [
+        {
+          "part_no": 1,
+          "title": "Part 1",
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "pair",
+            "prep_seconds": 900,
+            "speaking_seconds": 180,
+            "prompt_points": 4
+          },
+          "criteria": [
+            {
+              "name": "task fulfilment",
+              "max_points": 16
+            },
+            {
+              "name": "interaction",
+              "max_points": 16
+            },
+            {
+              "name": "coherence",
+              "max_points": 17
+            },
+            {
+              "name": "vocabulary and register",
+              "max_points": 17
+            },
+            {
+              "name": "structures",
+              "max_points": 17
+            },
+            {
+              "name": "pronunciation",
+              "max_points": 17
+            }
+          ]
+        },
+        {
+          "part_no": 2,
+          "title": "Part 2",
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "pair",
+            "prep_seconds": 0,
+            "speaking_seconds": 180,
+            "slides": 5
+          },
+          "criteria": [
+            {
+              "name": "task fulfilment",
+              "max_points": 16
+            },
+            {
+              "name": "interaction",
+              "max_points": 16
+            },
+            {
+              "name": "coherence",
+              "max_points": 17
+            },
+            {
+              "name": "vocabulary and register",
+              "max_points": 17
+            },
+            {
+              "name": "structures",
+              "max_points": 17
+            },
+            {
+              "name": "pronunciation",
+              "max_points": 17
+            }
+          ]
+        },
+        {
+          "part_no": 3,
+          "title": "Part 3",
+          "task_type": "speaking",
+          "item_type": "speaking",
+          "item_count": 1,
+          "speaking": {
+            "format": "pair",
+            "prep_seconds": 0,
+            "speaking_seconds": 120
+          },
+          "criteria": [
+            {
+              "name": "task fulfilment",
+              "max_points": 16
+            },
+            {
+              "name": "interaction",
+              "max_points": 16
+            },
+            {
+              "name": "coherence",
+              "max_points": 17
+            },
+            {
+              "name": "vocabulary and register",
+              "max_points": 17
+            },
+            {
+              "name": "structures",
+              "max_points": 17
+            },
+            {
+              "name": "pronunciation",
+              "max_points": 17
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
